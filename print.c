@@ -5,13 +5,27 @@
 void print(char board[][SIZE]){
 	int i=0, j=0;
 
-	while(i<SIZE){
-		j = 0;
-		while(j<SIZE){
-			printf("%c ",board[i][j]);
+	printf("  ");
+	for(i=65; i<65+SIZE; i++){
+		printf("%c ",i);
+	}
+	printf(" \n");
+
+	i=1;
+	while(i<=SIZE){
+		j = 1;
+		printf("%d ",i);
+		while(j<=SIZE){
+			printf("%c ",board[i-1][j-1]);
 			j++;
 		}
-		putchar('\n');
+		printf("%d\n",i);
 		i++;
 	}
+
+	printf("  ");
+	for(i=65; i<65+SIZE; i++){
+		printf("%c ",i);
+	}
+	printf(" \n");
 }
