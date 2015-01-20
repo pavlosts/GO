@@ -6,7 +6,9 @@ void print(char board[][SIZE]){
 	int i=0, j=0;
 
 	printf("  ");
-	for(i=65; i<65+SIZE; i++){
+	for(i=65; i<65+SIZE+1; i++){
+		if(i=='I')
+			continue;
 		printf("%c ",i);
 	}
 	printf(" \n");
@@ -24,7 +26,9 @@ void print(char board[][SIZE]){
 	}
 
 	printf("  ");
-	for(i=65; i<65+SIZE; i++){
+	for(i=65; i<65+SIZE+1; i++){
+		if(i=='I')
+			continue;
 		printf("%c ",i);
 	}
 	printf(" \n");

@@ -15,15 +15,15 @@ void refresh(char board[][SIZE], char *color, char *spot){
 		mark = "O";
 	}
 
-	x = (int) spot[0];
-	putchar(x);
+	if(spot[0] < 'I'){
+		x = spot[0] - 'A';
+	}else if(spot[0] > 'I'){
+		x = spot[0] - 'A' - 1;
+	}
 
-	y = atoi(spot[1]);
-	putchar(y);
+	y = (int) spot[1] - '1';
 
-	putchar('\n');
-
-	board[x][y] = mark[0];
+	board[y][x] = mark[0];
 
 	print(board);
 }

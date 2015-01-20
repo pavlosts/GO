@@ -19,15 +19,16 @@ int main() {
 
 	print(board);										//Typwnei to tablo
 
-	while(pass < 2){
+	while(pass < 10){
 		/* Read command from command line*/
 
+		scanf("%s",arg2);
 		if(!strcmp(command,"play")){
 			refresh(board, arg1, arg2);
 		}
 
 		//print(board);
-		
-	return 0;
+		pass++;
 	}
+	return 0;
 }
